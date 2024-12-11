@@ -1,0 +1,5 @@
+.env 
+bin/
+
+# Generate Proto files
+internal/proto

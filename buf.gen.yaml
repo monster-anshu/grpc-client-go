@@ -1,0 +1,19 @@
+version: v2
+
+clean: true
+
+inputs:
+  - directory: ./grpc-proto
+
+plugins:
+  - out: ./internal/proto
+    strategy: all
+    local: protoc-gen-go
+    opt:
+      - paths=source_relative
+
+  - out: ./internal/proto
+    strategy: all
+    local: protoc-gen-go-grpc
+    opt:
+      - paths=source_relative
